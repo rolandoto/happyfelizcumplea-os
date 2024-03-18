@@ -1,0 +1,25 @@
+@keyframes rotate-animation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes bounce-animation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  .animate-rotate {
+    animation: rotate-animation 3s infinite linear;
+  }
+  
+  .animate-bounce {
+    animation: bounce-animation 1s infinite;
+  }

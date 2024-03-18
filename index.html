@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css"/>
+<title>Feliz Cumpleaños</title>
+</head>
+<body>
+
+<script>
+function imprimirPastel() {
+    var niveles = 8; // Número de niveles del pastel
+
+    // Mensaje de Feliz Cumpleaños
+    var mensaje = "Feliz Cumpleaños lewis ";
+
+    // Calcular el espacio necesario para centrar el mensaje
+    var espaciosMensaje = Math.floor((niveles * 2 + 1 - mensaje.length) / 2);
+
+    // Imprimir cada nivel del pastel
+    for (var i = 0; i < niveles; i++) {
+        // Imprimir espacios en blanco antes de los asteriscos para centrar el pastel
+        var espacios = " ".repeat(niveles - i);
+        // Imprimir asteriscos para el nivel actual
+        var asteriscos = "*".repeat(2 * i + 1);
+        
+        // Concatenar espacios, asteriscos y mensaje y mostrar en consola
+        if (i === Math.floor(niveles / 2)) {
+            document.write('<pre class="animate-bounce">' + espacios + asteriscos + " " + mensaje + " " + asteriscos + '</pre>');
+        } else {
+            document.write('<pre>' + espacios + asteriscos + '</pre>');
+        }
+    }
+
+    // Imprimir la base del pastel
+    document.write('<pre class="animate-rotate">' + " ".repeat(niveles) + "*</pre>");
+}
+
+// Llamar a la función para imprimir el pastel de cumpleaños
+imprimirPastel();
+</script>
+
+</body>
+</html>
